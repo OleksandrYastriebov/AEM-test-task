@@ -1,5 +1,6 @@
 package com.site.model;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.Model;
 
@@ -19,7 +20,9 @@ public class NavigationItem {
 
     @PostConstruct
     protected void init() {
-        navigationTitle = NAV_TITLE_PREFIX + navigationTitle;
+        if (StringUtils.isNotEmpty(navigationTitle)) {
+            navigationTitle = NAV_TITLE_PREFIX + navigationTitle;
+        }
     }
 
     public String getNavigationTitle() {

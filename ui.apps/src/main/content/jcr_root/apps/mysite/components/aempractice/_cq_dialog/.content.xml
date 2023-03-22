@@ -60,12 +60,14 @@
                                                             jcr:primaryType="nt:unstructured"
                                                             sling:resourceType="granite/ui/components/foundation/form/textfield"
                                                             fieldLabel="Title of navigation item"
+                                                            required="true"
                                                             name="./navigationTitle"/>
                                                         <pagePath
                                                             jcr:primaryType="nt:unstructured"
                                                             sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
                                                             fieldLabel="Path to the page"
                                                             rootPath="/content/mysite"
+                                                            required="true"
                                                             name="./pagePath"/>
                                                     </items>
                                                 </column>
