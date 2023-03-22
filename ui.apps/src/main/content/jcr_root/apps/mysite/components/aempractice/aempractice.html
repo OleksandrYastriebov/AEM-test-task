@@ -1,0 +1,43 @@
+<link rel="stylesheet"
+      href="https://bootswatch.com/4/darkly/bootstrap.min.css">
+<sly data-sly-test.isAuthor="${wcmmode.edit || wcmmode.design}">
+    <div class="cq-placeholder" data-emptyText="${component.title}"></div>
+</sly>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.all @categories='mysite.site'}">
+</sly>
+
+<sly data-sly-use.model="com.site.model.AemPracticeModel"></sly>
+
+<div class="aem-practice-component jumbotron rounded">
+
+    <div class="container">
+        <h1 class="display-7 text-center">${model.title}</h1>
+        <sly data-sly-test="${model.isBackgroundImage && model.runModeService.isAuthor}">
+            <img class="bg-image text-center" alt="background image" src="${model.imagePath}"/>
+        </sly>
+    </div>
+
+    <div class="container">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item" data-sly-repeat.item="${model.navigationItems}">
+                <sly data-sly-set.navigationItem="${item.navigationTitle} - ${item.pagePath}"></sly>
+                <p>
+                    <sly data-sly-test="${itemList.first}"><b> ${navigationItem} </b></sly>
+                    <sly data-sly-test="${itemList.middle}"> ${navigationItem} </sly>
+                    <sly data-sly-test="${itemList.last}"><i> ${navigationItem} </i></sly>
+                </p>
+            </li>
+        </ul>
+    </div>
+
+    <!--Sightly can also be used to define an author/publish instance.
+    The service was used for demonstration purposes
+    <sly data-sly-test="${isAuthor}">Author mode</sly>-->
+    <div class="container">
+        <p data-sly-test="${model.runModeService.isAuthor}"> Author mode </p>
+        <p> Current page path: ${currentPage.path} </p>
+        <p> Current page title: ${currentPage.title} </p>
+    </div>
+</div>

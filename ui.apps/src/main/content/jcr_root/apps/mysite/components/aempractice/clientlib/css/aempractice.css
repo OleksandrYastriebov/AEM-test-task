@@ -1,0 +1,21 @@
+.aem-practice-component {
+  padding: 1rem;
+  border: 1px solid #444;
+  margin-bottom: 1rem;
+  display: flex;
+}
+
+.aem-practice-component .list-group {
+  margin: 1rem 0 0 1rem;
+}
+
+.aem-practice-component.list-group-item {
+  padding: .25rem;
+}
+
+.aem-practice-component .bg-image {
+  width: 400px;
+  height: 400px;
+  border-radius: 10px;
+  margin-right: 1rem;
+}
