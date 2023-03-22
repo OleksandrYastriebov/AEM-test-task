@@ -32,7 +32,6 @@ public class AemPracticeModel {
     @Optional
     private String title;
 
-
     public List<NavigationItem> getNavigationItems() {
         return navigationItems;
     }

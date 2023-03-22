@@ -14,7 +14,7 @@
 
     <div class="container">
         <h1 class="display-7 text-center">${model.title}</h1>
-        <sly data-sly-test="${model.isBackgroundImage && model.runModeService.isAuthor}">
+        <sly data-sly-test="${model.isBackgroundImage && model.runModeService.isPublish}">
             <img class="bg-image text-center" alt="background image" src="${model.imagePath}"/>
         </sly>
     </div>

@@ -23,4 +23,5 @@ public class RunModeServiceImpl implements RunModeService {
     public boolean isAuthor() {
         return slingSettingsService.getRunModes().contains(AUTHOR);
     }
+
 }

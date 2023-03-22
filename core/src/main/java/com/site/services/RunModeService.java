@@ -7,4 +7,5 @@ public interface RunModeService {
     boolean isPublish();
 
     boolean isAuthor();
+
 }
